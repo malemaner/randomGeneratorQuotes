@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative; 
+    background: #000;
+    background-image: url('4.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    opacity: 0.75; 
+    z-index: -1; 
+  }
+  
+  /* Main container */
+  #main {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: white;
+    box-shadow: 0 0.4px 0.4px rgba(255, 255, 255, 0.5),
+                0 1px 1px rgba(255, 255, 255, 0.5),
+                0 2.1px 2.1px rgba(255, 255, 255, 0.5),
+                0 4.4px 4.4px rgba(255, 255, 255, 0.5),
+                0 12px 12px rgba(181, 192, 199, 0.5);
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    opacity: 0.8;
+}
+  
+
+  header, #content {
+    width: 100%;
+  }
+  
+  header h1 {
+    font-size: 60px; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  #content p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  a {
+    text-decoration: none;
+    color: purple;}
+  button:hover {
+    background-color: rgba(23, 202, 229, 0.5);
+    box-shadow: 0 0 20px 10px rgba(23, 202, 229, 0.5);
+  }
+  
+  #quoteDisplay {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  #quoteDisplay blockquote, 
+  #quoteDisplay cite {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    #main {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    header h1 {
+      font-size: 35px;
+    }
+  
+    #content p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #main {
+      padding: 15px;
+    }
+  
+    header h1 {
+      font-size: 30px;
+    }
+  
+    #content p, #quoteDisplay {
+      font-size: 16px;
+    }
+  }
+  
